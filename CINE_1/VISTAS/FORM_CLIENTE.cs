@@ -14,15 +14,16 @@ namespace CINE_1.VISTAS
 {
     public partial class FORM_CLIENTE : Form
     {
-        CTL_CLIENTE CTL_CLIENTE = new CTL_CLIENTE();
         public FORM_CLIENTE()
         {
             InitializeComponent();
+            Update();
+            Form1.CTL_CLIENTE.mostrar(DG);
         }
 
         private void BAG_Click(object sender, EventArgs e)
         {
-            int pos = CTL_CLIENTE.posced(TC.Text.Trim());
+            int pos = Form1.CTL_CLIENTE.posced(TC.Text.Trim());
             if (pos == -1 )
             {
                 CLIENTE user = new CLIENTE
@@ -31,15 +32,15 @@ namespace CINE_1.VISTAS
                     NOMBRE1 = TN.Text,
                     APELLIDO1 = TA.Text,
                 };
-                CTL_CLIENTE.addlista(user);
+                Form1.CTL_CLIENTE.addlista(user);
                 MessageBox.Show("CLIENTE GUARDADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CTL_CLIENTE.IMP();
+                Form1.CTL_CLIENTE.IMP();
             }else
             {
                 MessageBox.Show("CLIENTE REPETIDO", "NOTIFICACION");
             }
 
-            CTL_CLIENTE.mostrar(DG);
+            Form1.CTL_CLIENTE.mostrar(DG);
             limpiar();
             
         }
@@ -57,7 +58,7 @@ namespace CINE_1.VISTAS
 
                 string cedula = DG.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                CLIENTE user = CTL_CLIENTE.BUSCARCED(cedula);
+                CLIENTE user = Form1.CTL_CLIENTE.BUSCARCED(cedula);
 
                 TC.Text = user.CEDULA1;
                 TN.Text = user.NOMBRE1;
@@ -69,7 +70,49 @@ namespace CINE_1.VISTAS
 
             }
 
-            CTL_CLIENTE.mostrar(DG);
+            Form1.CTL_CLIENTE.mostrar(DG);
+        }
+
+        private void BED_Click(object sender, EventArgs e)
+        {
+            int pos = Form1.CTL_CLIENTE.posced(TC.Text.Trim());
+            if (pos == -1)
+            {
+                CLIENTE user = new CLIENTE
+                {
+                    CEDULA1 = TC.Text,
+                    NOMBRE1 = TN.Text,
+                    APELLIDO1 = TA.Text,
+                };
+                Form1.CTL_CLIENTE.editarus(pos,user);
+                MessageBox.Show("CLIENTE GUARDADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            else
+            {
+                MessageBox.Show("CLIENTE REPETIDO", "NOTIFICACION");
+            }
+            limpiar();
+            Form1.CTL_CLIENTE.mostrar(DG);
+            BAG.Enabled = true;
+        }
+
+        private void BEL_Click(object sender, EventArgs e)
+        {
+            int pos = Form1.CTL_CLIENTE.posced(TC.Text.Trim());
+            if (pos == -1)
+            {
+                Form1.CTL_CLIENTE = new CTL_CLIENTE();
+                BAG.Enabled = true;
+                BEL.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("CLIENTE REPETIDO", "NOTIFICACION");
+            }
+            limpiar();
+            Form1.CTL_CLIENTE.mostrar(DG);
+            BAG.Enabled = true;
         }
     }
 }

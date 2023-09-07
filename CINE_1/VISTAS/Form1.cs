@@ -1,4 +1,5 @@
-﻿using CINE_1.VISTAS;
+﻿using CINE_1.CONTROLADOR;
+using CINE_1.VISTAS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,8 @@ using System.Windows.Forms;
 
 namespace CINE_1
 {
+
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -18,6 +21,10 @@ namespace CINE_1
             InitializeComponent();
         }
 
+
+        public static CTL_CLIENTE CTL_CLIENTE = new CTL_CLIENTE();
+
+        public static CTL_PRODUCTO CTL_PRO = new CTL_PRODUCTO();
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +44,8 @@ namespace CINE_1
 
         private void B3_Click(object sender, EventArgs e)
         {
-
+            FORM_FACTURA FP = new FORM_FACTURA();
+            FP.Show();
         }
     }
 }

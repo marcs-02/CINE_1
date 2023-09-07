@@ -114,6 +114,7 @@
             this.BEL.TabIndex = 8;
             this.BEL.Text = "ELIMINAR";
             this.BEL.UseVisualStyleBackColor = true;
+            this.BEL.Click += new System.EventHandler(this.BEL_Click);
             // 
             // BED
             // 
@@ -125,6 +126,7 @@
             this.BED.TabIndex = 7;
             this.BED.Text = "EDITAR";
             this.BED.UseVisualStyleBackColor = true;
+            this.BED.Click += new System.EventHandler(this.BED_Click);
             // 
             // BAG
             // 

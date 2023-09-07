@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CONTROLADOR\CTL_CLIENTE.cs" />
+    <Compile Include="CONTROLADOR\CTL_FACTURA.cs" />
     <Compile Include="CONTROLADOR\CTL_PRODUCTO.cs" />
     <Compile Include="MODELOS\CLIENTE.cs" />
     <Compile Include="MODELOS\DET_FACTURA.cs" />
@@ -65,6 +66,12 @@
     </Compile>
     <Compile Include="VISTAS\FORM_CLIENTE.Designer.cs">
       <DependentUpon>FORM_CLIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTAS\FORM_FACTURA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTAS\FORM_FACTURA.Designer.cs">
+      <DependentUpon>FORM_FACTURA.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTAS\FORM_PRODUCTO.cs">
       <SubType>Form</SubType>
@@ -86,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTAS\FORM_CLIENTE.resx">
       <DependentUpon>FORM_CLIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTAS\FORM_FACTURA.resx">
+      <DependentUpon>FORM_FACTURA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTAS\FORM_PRODUCTO.resx">
       <DependentUpon>FORM_PRODUCTO.cs</DependentUpon>

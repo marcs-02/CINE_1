@@ -14,13 +14,13 @@ namespace CINE_1.VISTAS
 {
     public partial class FORM_PRODUCTO : Form
     {
-        CTL_PRODUCTO CTL_PRO = new CTL_PRODUCTO();
         public FORM_PRODUCTO()
         {
             InitializeComponent();
             BED.Enabled = false;
             BEL.Enabled = false;
             UPDATE();
+            Form1.CTL_PRO.mostrartab(DG);
         }
 
         private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
@@ -30,7 +30,7 @@ namespace CINE_1.VISTAS
 
         public void UPDATE()
         {
-            TC.Text = CTL_PRO.obtenercod().ToString();
+            TC.Text = Form1.CTL_PRO.obtenercod().ToString();
         }
 
         private void BAG_Click(object sender, EventArgs e)
@@ -43,15 +43,15 @@ namespace CINE_1.VISTAS
                     STOCK1 = TS.Text,
             };
 
-            CTL_PRO.Add_lista(producto);
+            Form1.CTL_PRO.Add_lista(producto);
 
             MessageBox.Show("USUARIO GUARDADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
-            CTL_PRO.IMP();
+            Form1.CTL_PRO.IMP();
 
             UPDATE();
 
-            CTL_PRO.mostrartab(DG);
+            Form1.CTL_PRO.mostrartab(DG);
 
             LIMPIAR();
 
@@ -69,7 +69,7 @@ namespace CINE_1.VISTAS
 
         private void BED_Click(object sender, EventArgs e)
         {
-            int POS = CTL_PRO.poscod(TC.Text);
+            int POS = Form1.CTL_PRO.poscod(TC.Text);
 
             PRODUCTO USER = new PRODUCTO
             {
@@ -79,24 +79,24 @@ namespace CINE_1.VISTAS
                 STOCK1 = TS.Text,
             };
 
-            CTL_PRO.editarus(POS, USER);
+            Form1.CTL_PRO.editarus(POS, USER);
             BAG.Enabled = true;
             BED.Enabled = false;
             BEL.Enabled = false;
             LIMPIAR();
 
-            CTL_PRO.mostrartab(DG);
+            Form1.CTL_PRO.mostrartab(DG);
         }
 
         private void BEL_Click(object sender, EventArgs e)
         {
-            int POS = CTL_PRO.poscod(TC.Text);
+            int POS = Form1.CTL_PRO.poscod(TC.Text);
             if (POS != -1)
             {
-                CTL_PRO.eliminarus(POS);
+                Form1.CTL_PRO.eliminarus(POS);
                 LIMPIAR();
 
-                CTL_PRO.mostrartab(DG);
+                Form1.CTL_PRO.mostrartab(DG);
                 BAG.Enabled = true;
                 BED.Enabled = false;
                 BEL.Enabled = false;
@@ -105,7 +105,7 @@ namespace CINE_1.VISTAS
                 MessageBox.Show("ERROR AL ELIMINAR", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            CTL_PRO.mostrartab(DG);
+            Form1.CTL_PRO.mostrartab(DG);
         }
 
         private void DG_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -120,7 +120,7 @@ namespace CINE_1.VISTAS
 
                 string cedula = DG.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                PRODUCTO user = CTL_PRO.BUSCARCOD(cedula);
+                PRODUCTO user = Form1.CTL_PRO.BUSCARCOD(cedula);
 
                 TC.Text = user.COD1;
                 TN.Text = user.NOMBRE1;
@@ -133,7 +133,7 @@ namespace CINE_1.VISTAS
 
             }
 
-            CTL_PRO.mostrartab(DG);
+            Form1.CTL_PRO.mostrartab(DG);
         }
     }
 }
