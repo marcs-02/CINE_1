@@ -16,15 +16,20 @@ namespace CINE_1
 
     public partial class Form1 : Form
     {
+
+
+
+        public static CTL_CLIENTE CTL_CLIENTE = new CTL_CLIENTE();
+
+        public static CTL_PRODUCTO CTL_PRO = new CTL_PRODUCTO();
+
+        public static CTL_FACTURA CTL_FAC = new CTL_FACTURA();
         public Form1()
         {
             InitializeComponent();
         }
 
 
-        public static CTL_CLIENTE CTL_CLIENTE = new CTL_CLIENTE();
-
-        public static CTL_PRODUCTO CTL_PRO = new CTL_PRODUCTO();
         private void Form1_Load(object sender, EventArgs e)
         {
 

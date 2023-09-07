@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,14 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LFEC = new System.Windows.Forms.Label();
+            this.LFAC = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.T1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.LN = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BAG = new System.Windows.Forms.Button();
             this.NOD = new System.Windows.Forms.NumericUpDown();
-            this.T2 = new System.Windows.Forms.TextBox();
+            this.CB1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -103,14 +103,14 @@
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -186,8 +186,8 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.LFEC, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.LFAC, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(681, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -197,31 +197,31 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(222, 129);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // label4
+            // LFEC
             // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 56);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "dd/mm/yy";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LFEC.AutoSize = true;
+            this.LFEC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LFEC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LFEC.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFEC.Location = new System.Drawing.Point(3, 73);
+            this.LFEC.Name = "LFEC";
+            this.LFEC.Size = new System.Drawing.Size(216, 56);
+            this.LFEC.TabIndex = 6;
+            this.LFEC.Text = "dd/mm/yy";
+            this.LFEC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // LFAC
             // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 73);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "FACT Nro 1";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LFAC.AutoSize = true;
+            this.LFAC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LFAC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LFAC.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFAC.Location = new System.Drawing.Point(3, 0);
+            this.LFAC.Name = "LFAC";
+            this.LFAC.Size = new System.Drawing.Size(216, 73);
+            this.LFAC.TabIndex = 5;
+            this.LFAC.Text = "FACT Nro 1";
+            this.LFAC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel4
             // 
@@ -274,13 +274,14 @@
             this.T1.Name = "T1";
             this.T1.Size = new System.Drawing.Size(426, 44);
             this.T1.TabIndex = 6;
+            this.T1.TextChanged += new System.EventHandler(this.T1_TextChanged);
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.94833F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.05167F));
-            this.tableLayoutPanel6.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.LN, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 67);
@@ -290,19 +291,19 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(666, 59);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // label7
+            // LN
             // 
-            this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(155, 0);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(508, 59);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "MARCO GERARDO MONTOYA MOSQUERA";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LN.AutoSize = true;
+            this.LN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LN.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LN.Location = new System.Drawing.Point(155, 0);
+            this.LN.Name = "LN";
+            this.LN.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LN.Size = new System.Drawing.Size(508, 59);
+            this.LN.TabIndex = 6;
+            this.LN.Text = "-";
+            this.LN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -325,7 +326,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.74878F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
-            this.tableLayoutPanel7.Controls.Add(this.T2, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.CB1, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.NOD, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.BAG, 3, 0);
@@ -336,6 +337,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(906, 62);
             this.tableLayoutPanel7.TabIndex = 7;
+            this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
             // label6
             // 
@@ -527,14 +529,15 @@
             this.NOD.Size = new System.Drawing.Size(305, 51);
             this.NOD.TabIndex = 10;
             // 
-            // T2
+            // CB1
             // 
-            this.T2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.T2.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T2.Location = new System.Drawing.Point(153, 3);
-            this.T2.Name = "T2";
-            this.T2.Size = new System.Drawing.Size(200, 44);
-            this.T2.TabIndex = 11;
+            this.CB1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CB1.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB1.FormattingEnabled = true;
+            this.CB1.Location = new System.Drawing.Point(153, 3);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(200, 51);
+            this.CB1.TabIndex = 1;
             // 
             // FORM_FACTURA
             // 
@@ -579,14 +582,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LFEC;
+        private System.Windows.Forms.Label LFAC;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox T1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LN;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label label6;
@@ -601,8 +604,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox T2;
         private System.Windows.Forms.NumericUpDown NOD;
         private System.Windows.Forms.Button BAG;
+        private System.Windows.Forms.ComboBox CB1;
     }
 }
